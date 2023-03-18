@@ -1,0 +1,63 @@
+<div class="app__footer section__padding">
+  <div class="app__footeroverlay">
+    <div class="app__footeroverlay-black"></div>
+    <div class="app__footeroverlay-img app__bg"></div>
+  </div>
+  <div class="app__newsletter">
+    <div class="app__newsletter-heading">
+      <div class="app__subheading">
+        {{#each data.staticData}}
+        <p class="p__cormorant">{{this.footerSubTitle}}</p>
+        <img src={{this.spoonImage}} alt="spoon" class="spoon__img" />
+        {{/each}}
+
+      </div>
+      <h1 class="headtext__cormorant">Subscribe To Our NewsLetter</h1>
+      <p class="p__opensans">And Never Miss Latest Updates!</p>
+    </div>
+    <form class="app__newsletter-input app__newsletter-form_subscribe flex__center">
+      <input type="email" name="email" placeholder="Enter Your Email address" />
+      {{!-- change button type to submit to send data don't foreget that --}}
+      <button type="button" class="custom__button">
+        Subscribe
+      </button>
+    </form>
+    <p class="form_subscribe-message p__cormorant"></p>
+  </div>
+  <div class="app__footer-links">
+    <div class="app__footer-links_contact">
+      <h1 class="app__footer-headtext">Contact Us</h1>
+      <p class="p__opensans">9 W 53rd St, New York, NY 10019,USA</p>
+      <p class="p__opensans">+1 212-344-1230</p>
+      <p class="p__opensans">+1 212-555-666</p>
+    </div>
+    <div class="app__footer-links_logo">
+      {{#each data.staticData}}
+      <img src={{this.logo}} alt="gericht" />
+      {{/each}}
+      <p class="p__opensans">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
+        atque illo autem modi nam
+      </p>
+      {{#each data.staticData}}
+      <img src={{this.spoonImage}} alt="spoon" />
+      {{/each}}
+
+      <div class="app__footer-links_icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
+    <div class="app__footer-links_work">
+      <h1 class="app__footer-headtext">Working Hours</h1>
+      <p class="p__opensans">Monday-Friday:</p>
+      <p class="p__opensans">+1 212-344-1230</p>
+      <p class="p__opensans">Saturday-Sunday:</p>
+      <p class="p__opensans">07:00am -11:00pm</p>
+    </div>
+  </div>
+  <div class="footer__copyright">
+    <p class="p__cormorant">2021 Gericht. All Rights recived</p>
+  </div>
+</div>

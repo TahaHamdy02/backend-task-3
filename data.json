@@ -1,0 +1,49 @@
+{
+    "staticData": [
+        {
+            "logo": "imgs/gericht.png",
+            "footerSubTitle": "newsletter",
+            "spoonImage": "imgs/spoon.png"
+        }
+    ],
+    "headerData": [
+        {
+            "pageTitle": "home",
+            "subTitle": "Chase the new Flavour",
+            "mainText": "The Key to Fine Dining",
+            "welcomeImage": "imgs/welcome.png"
+        }
+    ],
+    "menu": [
+        {
+            "subTitle": "Menu that fits you palatte"
+        }
+    ],
+    "aboutUs": [
+        {
+            "imageG": "imgs/G.png",
+            "knife": "imgs/knife.png"
+        }
+    ],
+    "ourHistory": [
+        {
+            "subTitle": "Our History",
+            "history01": "imgs/History__01.png",
+            "history02": "imgs/History__02.png"
+        }
+    ],
+    "OverYears": [
+        {
+            "num": "30+",
+            "Text": "Breakfast Option"
+        },
+        {
+            "num": "50+",
+            "Text": "Dinner Option"
+        },
+        {
+            "num": "8",
+            "Text": "New Location"
+        }
+    ]
+}

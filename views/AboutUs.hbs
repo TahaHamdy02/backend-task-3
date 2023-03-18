@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/aboutus.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <title>{{pageTitle}}</title>
+</head>
+
+<body>
+  {{>Navbar}}
+
+  <section class="app__aboutus app__bg flex__center section__padding" id="about">
+    <div class="app__aboutus-overlay flex__center">
+      {{#each data.aboutUs}}
+      <img src={{imageG}} alt="G" />
+      {{/each}}
+    </div>
+    <div class="app__aboutus-content flex__center">
+      <div class="app__aboutus-content_about">
+        <h1 class="headtext__cormorant">About Us</h1>
+        {{#each data.staticData}}
+        <img src={{spoonImage}} alt="spoon" class="spoon__img" />
+        {{/each}}
+        <p class="p__opensans">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+          pharetra adipiscing ultrices vulputate posuere tristique. In sed
+          odio nec aliquet eu proin mauris et.
+        </p>
+        <button type="button" class=" custom__button">
+          Read More
+        </button>
+      </div>
+      {{#each data.aboutUs}}
+      <div class="app__aboutus-content_knife flex__center">
+        <img src={{knife}} alt="knife" />
+      </div>
+      {{/each}}
+      <div class="app__aboutus-content_history">
+        <h1 class="headtext__cormorant">Our History</h1>
+        {{#each data.staticData}}
+        <img src={{spoonImage}} alt="spoon" class="spoon__img" />
+        {{/each}}
+        <p class="p__opensans">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+          pharetra adipiscing ultrices vulputate posuere tristique. In sed
+          odio nec aliquet eu proin mauris et.
+        </p>
+        <button type="button" class=" custom__button">
+          Read More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  {{>Footer}}
+</body>
+
+</html>

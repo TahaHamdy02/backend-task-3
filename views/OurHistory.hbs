@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/ourhistory.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>{{pageTitle}}</title>
+</head>
+
+<body>
+    {{>Navbar}}
+
+    <section class="app__servingcustomer flex__center section__padding">
+        <div class="app__servingcustomer-info flex__center">
+            <div class="app__servingcustomer-info_trattoria">
+                <p class="p__opensans">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                    consequuntur facilis impedit corporis reprehenderit voluptas quae.
+                </p>
+                {{#each data.ourHistory}}
+                <img src={{history01}} alt="history01" />
+                {{/each}}
+            </div>
+            <div class="app__servingcustomer-info_years">
+                {{#each data.ourHistory}}
+                <img src={{history02}} alt="history02">
+                {{/each}}
+                <h3 class="headtext__cormorant">Over The Years</h3>
+                <div class="app__servingcustomer-info_years-info flex__center">
+                    {{#each data.OverYears}}
+                    <div class="info">
+                        <div class="subtitle">
+                            <h3 class="p__cormorant">{{num}}</h3>
+                            {{#each data.staticData}}
+                            <img src={images.spoon} alt="spoon">
+                            {{/each}}
+                            <p class="p__cormorant">{{Text}}</p>
+                        </div>
+                        <div class="line"/>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>>
+    {{>Footer}}
+</body>
+
+</html>

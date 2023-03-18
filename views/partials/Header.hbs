@@ -1,0 +1,27 @@
+<section class="app__header app__wrapper section__padding" id="home">
+    <div class="app__wrapper_info">
+        <div class="app__subheading">
+            {{#each data.headerData}}
+            <p class="p__cormorant">{{this.subTitle}}</p>
+            {{/each}}
+            {{#each data.staticData}}
+            <img src={{this.spoonImage}} alt="spoon" class="spoon__img" />
+            {{/each}}
+        </div>
+        {{#each data.headerData}}
+        <h1 class="app__header-h1">{{this.mainText}}</h1>
+        <p class="p__opensans">
+            Sit tellus lobortis sed senectus vivamus molestie. Condimentum
+            volutpat morbi facilisis quam scelerisque sapien. Et, penatibus
+            aliquam amet tellus
+        </p>
+        <button type="button" class="custom__button">
+            <a href="#">Explor Menu</a>
+        </button>
+    </div>
+    <div class="app__wrapper_img">
+        <img src={{this.welcomeImage}} alt="header-img" />
+    </div>
+    {{/each}}
+
+</section>

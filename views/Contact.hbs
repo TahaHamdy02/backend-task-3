@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/contactus.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>{{ContactData.pageTitle}}</title>
+</head>
+
+<body>
+    {{>Navbar}}
+    <div class="app__contactus section__padding app__wrapper">
+        <div class="app__contactus-form">
+            <form action="">
+                <div class="label">
+                    <input required type="text" name="name" id="userName" placeholder="Full Name" />
+                </div>
+                <div class="label">
+                    <input required type="email" name="email" id="userEmail" placeholder="Email" />
+                </div>
+                <div class="label">
+                    <textarea required name="message" id="userMessage" placeholder="Message" cols="30"
+                        rows="10"></textarea>
+                </div>
+                <p class="p__cormorant app__contactus-form_message"></p>
+                <button type="submit" class="custom__button">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+        <div class="app__wrapper_img">
+            <img src={{ContactData.contactImage}} alt="contactus01" />
+        </div>
+    </div>
+    {{>Footer}}
+</body>
+
+</html>

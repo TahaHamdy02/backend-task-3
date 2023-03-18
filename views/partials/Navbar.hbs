@@ -1,0 +1,90 @@
+<nav class="app__navbar">
+    <div class="app__navbar-logo">
+        {{#each data.staticData}}
+        <img src={{this.logo}} alt="logo" />
+        {{/each}}
+    </div>
+    <ul class="app__navbar-links">
+        <li class="p__opensans">
+            <a href="home">Home</a>
+        </li>
+        <li class="p__opensans">
+            <a href="aboutus">About</a>
+        </li>
+        <li class="p__opensans">
+            <a href="ourhistory">Our History</a>
+        </li>
+        <li class="p__opensans">
+            <a href="contactus">Contact Us</a>
+        </li>
+    </ul>
+    <div class="app__navbar-login">
+        <a href="#login" class="p__opensans">
+            Log In / Register
+        </a>
+        <div></div>
+        <a href="/page1#my-element">
+            <p class="p__opensans">Book Table</p>
+        </a>
+    </div>
+    <div class="app__navbar-smallscreen">
+        <label class="hamburger md-outline-restaurant-menu close">
+            <input type="checkbox">
+            <svg viewBox="0 0 32 32">
+                <path class="line line-top-bottom"
+                    d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                </path>
+                <path class="line" d="M7 16 27 16"></path>
+            </svg>
+        </label>
+        <div class="app__navbar-smallscreen_overlay">
+            <ul class="app__navbar-smallscren-links">
+                <li class="p__opensans">
+                    <a href="home">Home</a>
+                </li>
+                <li class="p__opensans">
+                    <a href="ourChefs">Our Team</a>
+                </li>
+                <li class="p__opensans">
+                    <a href="chefDetails">Chef Details</a>
+                </li>
+                <li class="p__opensans">
+                    <a href="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<script>
+    const checkbox = document.querySelector('.app__navbar-smallscreen input[type="checkbox"]');
+    const overlay = document.querySelector('.app__navbar-smallscreen_overlay');
+    const links = document.querySelectorAll('.app__navbar-smallscren-links a');
+    const navbar = document.querySelector('.app__navbar');
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 0) {
+            navbar.style.backgroundColor = '#0c0c0c';
+            navbar.style.boxShadow = '0 0 10px #f3f3f3';
+            navbar.style.transition = 'background-color 0.5s ease-out';
+
+        } else {
+            navbar.style.boxShadow = 'none';
+            navbar.style.backgroundColor = 'transparent';
+        }
+    });
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            overlay.classList.add('app__navbar-smallscreen_overlay--active');
+        } else {
+            overlay.classList.remove('app__navbar-smallscreen_overlay--active');
+        }
+        links.forEach(function (link) {
+            link.addEventListener('click', function () {
+                checkbox.checked = false;
+                overlay.classList.remove('app__navbar-smallscreen_overlay--active');
+            });
+        });
+    });
+</script>

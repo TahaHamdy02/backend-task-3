@@ -1,0 +1,111 @@
+.app__servingcustomer {
+  width: 100%;
+  background-color: var(--color-black);
+  align-items: center;
+  justify-content: center;
+}
+
+.app__servingcustomer-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 6rem;
+  flex-direction: row;
+}
+
+.app__servingcustomer-info img {
+  max-width: 100%;
+}
+.app__servingcustomer-info_years-info .info {
+  display: flex;
+  align-items: center;
+}
+.app__servingcustomer-info_years-info .info .subtitle img {
+  margin: 1rem 0;
+}
+.app__servingcustomer-info_years-info .info .line:last-child {
+  display: none;
+}
+.app__servingcustomer-info_trattoria {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  row-gap: 2rem;
+  margin-right: 2rem;
+}
+
+.app__servingcustomer-info_trattoria p {
+  color: var(--color-grey);
+  max-width: 550px;
+}
+
+.app__servingcustomer-info_years {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 2rem;
+  row-gap: 3rem;
+}
+
+.app__servingcustomer-info_years-info {
+  justify-content: space-between;
+}
+
+/* .app__servingcustomer-info_years-info:nth-child(1){
+    display: flex;
+  } */
+.app__servingcustomer-info_years .subtitle h3 {
+  font-size: 40px;
+  color: var(--color-golden);
+}
+
+.app__servingcustomer-info_years .subtitle p {
+  width: min-content;
+}
+
+.app__servingcustomer-info_years .line {
+  height: 100px;
+  width: 3px;
+  border-radius: 30%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  margin: 0 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .app__servingcustomer-info {
+    flex-direction: column-reverse;
+    margin-top: 4rem;
+  }
+
+  .app__servingcustomer-info_years,
+  .app__servingcustomer-info_trattoria {
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .app__servingcustomer-info {
+    margin-top: 2rem;
+  }
+  .app__servingcustomer-info_years-info {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .app__servingcustomer-info_years .line {
+    margin: 0 1rem;
+  }
+}

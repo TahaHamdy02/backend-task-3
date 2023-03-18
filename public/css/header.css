@@ -1,0 +1,33 @@
+.app__header {
+    background-color: var(--color-black);
+    margin-top: 5rem;
+}
+
+.app__header-h1 {
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    line-height: 117px;
+    font-size: 90px;
+}
+
+.app__wrapper_info p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    color: var(--color-grey);
+}
+
+.app__wrapper_info button {
+    margin-top: 2rem;
+    background-color: var(--color-golden);
+}
+
+@media screen and (width <=450px) {
+    .app__header-h1 {
+        font-size: 80px;
+    }
+}
